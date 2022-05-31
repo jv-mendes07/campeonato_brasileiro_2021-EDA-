@@ -86,7 +86,72 @@ Colunas do dataset de estatísticas de jogos do campeonato brasileiro:
   ```
 ### **(2)** Conhecimento exploratório dos dados
 
-Nesta fase, os dados do Brasileirão 2021 começaram à ser explorados para que novas informações fossem extraídas de tal base de dados
+Nesta fase, os dados do Brasileirão 2021 começaram à ser explorados para que novas informações fossem extraídas de tal base de dados, primeiramente aplicamos o método .cumsum() para obtermos a soma cumulativa de gols por partida no Brasileirão 2021, e por fim obtivemos o resultado 842, que em outras palavras significa que 842 gols foram marcados no Brasileirão 2021 como um todo.
+
+À partir de tal informação, nos perguntamos:
+
+#### **(1)** Quais foram às edições do campeonato brasileiro que tiveram mais gols contabilizados em todo o torneio?
+
+Para responder tal questão, agrupamos os anos de cada Brasileirão e contabilizamos a quantidade de gols que foram marcados em cada edição anual do campeonato brasileiro, e assim obtivemos este resultado:
+
+| index | ano  | qtd_de_gols |   |
+|-------|------|-------------|---|
+| 0     | 2003 | 1592        |   |
+| 1     | 2004 | 1534        |   |
+| 2     | 2005 | 1451        |   |
+| 3     | 2006 | 1030        |   |
+| 4     | 2007 | 1047        |   |
+| 5     | 2008 | 1035        |   |
+| 6     | 2009 | 1094        |   |
+| 7     | 2010 | 978         |   |
+| 8     | 2011 | 1017        |   |
+| 9     | 2012 | 940         |   |
+| 10    | 2013 | 936         |   |
+| 11    | 2014 | 860         |   |
+| 12    | 2015 | 897         |   |
+| 13    | 2016 | 912         |   |
+| 14    | 2017 | 923         |   |
+| 15    | 2018 | 827         |   |
+| 16    | 2019 | 876         |   |
+| 17    | 2020 | 944         |   |
+| 18    | 2021 | 842         |   |
+|       |      |             |   |
  
-  
+A tabela acima está organizada em ordem crescente cronologicamente, isto é, do menor ano até o maior ano em que os gols totais de cada torneio foram ordenados.
+
+Após isto, ordenamos às cinco edições do Brasileirão que mais gols foram marcados durante todo o campeonato:
+
+|           index |              ano | total_de_gols |
+|-----------------|------------------|---------------|
+| 0               | 2003             | 1592          |
+| 1               | 2004             | 1534          |
+| 2               | 2005             | 1451          |
+| 6               | 2009             | 1094          |
+| 4               | 2007             | 1047          |
+
+Curiosamente, os torneios da década de 2000 foram os anos em que o campeonato brasileiro teve edições com o maior número de gols marcados, 2003, 2004 e 2005 consecutivamente foram os anos com mais gols marcados em um campeonato brasileiro, à partir desses anos em diante o campeonato brasileiro teve gols marcados abaixo de tais edições.
+
+Inversamente, ordenamos também as edições do Brasileirão que tiveram menos gols contabilizados em todo o campeonato:
+
+|           index |                   ano | total_de_gols |
+|-----------------|-----------------------|---------------|
+| 15              | 2018                  | 827           |
+| 18              | 2021                  | 842           |
+| 11              | 2014                  | 860           |
+| 16              | 2019                  | 876           |
+| 12              | 2015                  | 897           |
+
+Às edições mais recentes do Brasileirão de 2018, 2019 e 2021 são uma das edições registradas com o menor número de gols marcados em todo o campeonato.
+
+Após tal exposição, poderemos apresentar um gráfico de colunas para representar a quantidade de gols marcados em cada edição anual do Brasileirão:
+
+![](./img/A1.png)
+
+Um gráfico de pizza seria útil para representar proporcionalmente a quantidade de gols marcados em cada ano do Brasileirão em relação a quantidade de gols marcados durante todos os Brasileirões de 2003 até 2021.
+
+![](./img/A2.png)
+
+Em suma, o gráfico de pizza expressa informacionalmente que do total de gols marcados em todos os Brasileirões de 2003 até 2021, aproximadamente entre 7 e 8% desses gols foram marcados entre os anos de 2003 e 2005, e de 100% do total de gols de todos os Brasileirões, 23% representa a quantidade de gols marcados nos anos de 2003 até 2005, ou seja, quase 1 / 4 dos gols de todos os Brasileirões foi marcado em tal intervalo entre 2003 e 2005.
+
+
 
