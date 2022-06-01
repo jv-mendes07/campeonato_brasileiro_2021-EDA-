@@ -79,6 +79,8 @@ Colunas do dataset de estatísticas de jogos do campeonato brasileiro:
   
   **(2)** Mudamos o nome das colunas de 'mandante' e 'visitante' para 'time_mandante' e 'time_visitante' para deixar o título das colunas o mais específico e explícito possível para que a informação seja entendida.
   
+  **(3)** Depois disto, durante o restante da análise exploratória, mudamos os nomes das colunas em agrupamentos e em várias manipulações para podermos ter nomes de colunas com nomes mais condizentes com suas informações expressas.
+  
 * Criação de coluna:
 
   **(1)** Criamos uma coluna que some os dados numéricos da coluna de gols do time mandante em junção com os gols do time visitante, tal coluna criada expressa a quantidade de gols totais em cada partida do Brasileirão 2021.
@@ -244,10 +246,117 @@ Entre os times com mais vitórias 'dentro' de casa que terminaram o campeonato f
 
 Já entre os times com mais vitórias 'fora' de casa que terminaram o campeonato fora do G4, temos o Bragantino e o Atlético-GO, em que o Bragantino teve um término de torneio próximo do G4 na sexta posição, e temos o Atlético-GO que teve o término na nona posição do campeonato.
 
-Após respondermos a questão (2), poderemos continuar à explorar o motivo do porquê o São Paulo e o Cuiabá que foram um dos times com menos vitórias contabilizadas no Brasileirão, não foram rebaixados para à série B? Enquanto times como o Bahia e o Grêmio que foram times com mais vitórias em comparação, foram um dos quatro times rebaixados da série A para à série B.
+Após respondemos a questão (2), poderemos continuar à explorar o motivo do porquê o São Paulo e o Cuiabá que foram um dos times com menos vitórias contabilizadas no Brasileirão, não foram rebaixados para à série B? Enquanto times como o Bahia e o Grêmio que foram times com mais vitórias em comparação, foram um dos quatro times rebaixados da série A para à série B.
 
 Será que o São Paulo e o Cuiabá contabilizaram mais empates ao ponto de conseguirem superar em pontos o Bahia e o Grêmio? E será que o Bahia e o Grêmio foram um dos times com mais derrotas contabilizadas em comparação ao São Paulo e ao Cuiabá, e assim possibilitaram com que os dois times escapassem do rebaixamento pelos pontos obtidos por empates?
 
 Bom, iremos responder tais questões nas próximas perguntas:
 
 #### **(4)** Quais times do Brasileirão 2021 contabilizaram mais empates em todo o campeonato?
+
+Basicamente, para responder tal pergunta usamos o .groupby() para agruparmos os times participantes do Brasileirão 2021, filtramos os jogos que foram concluídos com placares idênticos e somamos a quantidade de empates que cada time obteve em todo o campeonato.
+
+Consequentemente, colocamos uma tabela em ordem decrescente para expressar os times que mais empataram até os times que menos empataram no Brasileirão 2021:
+
+| index | time          | total_empates |
+|-------|---------------|---------------|
+| 10    | Cuiabá        | 17            |
+| 4     | Ceará         | 17            |
+| 1     | São Paulo     | 15            |
+| 6     | Santos        | 14            |
+| 9     | América-MG    | 14            |
+| 0     | Atlético-GO   | 14            |
+| 2     | Bragantino    | 14            |
+| 7     | Juventude     | 13            |
+| 8     | Internacional | 12            |
+| 11    | Chapecoense   | 12            |
+| 14    | Corinthians   | 12            |
+| 3     | Sport         | 11            |
+| 15    | Bahia         | 10            |
+| 13    | Fluminense    | 9             |
+| 12    | Athlético-PR  | 8             |
+| 19    | Flamengo      | 8             |
+| 5     | Grêmio        | 7             |
+| 16    | Fortaleza     | 7             |
+| 17    | Palmeiras     | 6             |
+| 18    | Atlético-MG   | 6             |
+
+Curiosamente, os times com mais vitórias contabilizadas, foram um dos times com menos empates registrados em todo o campeonato, será que tal tendência irá se manter para a quantidade de derrotas? Isto é, será que os times com mais vitórias em todo o campeonato são os times com menos derrotas contabilizadas?
+
+Depois disto, plotamos um gráfico de barras horizontais para representar visualmente os dez times que mais empataram em todo o campeonato:
+
+![](./img/A5.png)
+
+O gráfico de barras acima demonstra que o São Paulo e o Cuiabá foram um dos times que mais empataram no Brasileirão 2021 e que contabilizaram mais empates do que o Grêmio e o Bahia. 
+
+Será que a quantidade de empates do São Paulo e do Cuiabá foram um dos fatores cruciais para que os dois times não fossem rebaixados?
+
+#### **(4)** Quais foram os times com mais derrotas contabilizadas em todo o Brasileirão 2021?
+
+Para respondermos a tal pergunta, realizamos o mesmo processo manipulativo para sabermos a quantidade de derrotas de cada time no Brasileirão e quais foram os times com mais derrotas contabilizadas.
+
+| index |    time       | total_derrotas |          
+|-------|---------------|----------------|
+|       |               |                |
+| 1     | Chapecoense   | 25             |
+| 0     | Gremio        | 19             |
+| 2     | Sport         | 18             |
+| 3     | Bahia         | 17             |
+| 4     | Athletico-PR  | 17             |
+| 5     | Fluminense    | 14             |
+| 6     | Juventude     | 14             |
+| 7     | Fortaleza     | 14             |
+| 8     | Internacional | 14             |
+| 9     | Sao Paulo     | 12             |
+| 11    | Santos        | 12             |
+| 13    | Palmeiras     | 12             |
+| 15    | Corinthians   | 11             |
+| 17    | Cuiaba        | 11             |
+| 10    | Atletico-GO   | 11             |
+| 14    | America-MG    | 11             |
+| 16    | Bragantino    | 10             |
+| 12    | Ceara         | 10             |
+| 19    | Flamengo      | 9              |
+| 18    | Atletico-MG   | 6              |
+
+Após isto, utilizamos o gráfico comum e simples de colunas para representarmos os dez times com mais derrotas registradas em todo o torneio:
+
+![](./img/A6.png)
+
+Concluído isto, fizemos a diferença de empates e de vitórias entre São Paulo e Cuiabá em comparação ao Bahia e ao Grêmio, e descobrimos que às explicações do porquê São Paulo e Cuiabá que foram times com menos vitórias e que não foram rebaixados, em comparação ao Grêmio e ao Bahia que tiveram mais vitórias e foram rebaixados é que:
+
+   **(1)**  O São Paulo e o Cuiabá contabilizaram mais empates no campeonato e isto os garantem um ponto em cada empate.
+   
+   **(2)** O Grêmio e o Sport contabilizaram mais derrotas no campeonato e isto não os garantem nenhum ponto.
+   
+   **(3)** A diferença de vitórias entre Grêmio e Bahia em relação ao São Paulo e Cuiabá é de uma à duas vitórias, enquanto a diferença de empates entre São Paulo e Cuiabá em relação ao Grêmio e ao Bahia é de aproximadamente 7 à 8 empates.
+   
+   Logo, à partir da justificação **(3)** podemos concluir que:
+       
+       Cuiabá -> 8 pontos. Bahia -> 3 pontos
+       São Paulo -> 7 pontos. Grêmio -> 3 pontos
+       Cuiabá -> 8 pontos. Grêmio -> 6 pontos.
+       
+Resumidamente, São Paulo e Cuiabá por terem contabilizado de 7 à 8 empates do que o Bahia e o Grêmio, conseguiram ultrapassar os pontos de vantagem de uma à duas vitórias do Bahia e do Grêmio, e justificadamente conseguiram evitar o rebaixamento para a série B. 
+
+E também, correspondente às expectativas, Chapecoense, Grêmio, Sport e Bahia que foram os times rebaixados para a série B do Brasileirão, também foram os times com mais derrotas contabilizadas no Brasileirão 2021 como um todo.
+
+E curiosamente, somente dois times do G4 foram um dos times com menos derrotas no campeonato, assim somente Atlético-MG e Flamengo tiveram menos derrotas no torneio, enquanto Palmeiras e Fortaleza foram times do G4 com mais derrotas comparativamente contabilizadas no campeonato.
+
+À partir de tais informações básicas que foram obtidas podemos ir para questões mais técnicas e complexas estatisticamente, por exemplo, qual é a correlação entre gols dos times mandantes ou visitantes em relação aos gols da partida? 
+
+Isto é, será que há uma tendência de que os times mandantes marquem mais gols na partida do que os times visitantes?
+
+#### **(5)** Qual é a correlação de gols dos times mandantes e visitantes em relação aos gols por partida? 
+
+Com o método .corr() obtemos que a correlação entre gols do time mandante e gols por partida é 0.75, ou seja, é uma correlação forte entre às duas variáveis, enquanto a correlação entre gols do time visitante e gols por partida é 0.69, que é uma correlação classificada como moderada pela correlação de Pearson.
+
+Por esses dados numéricos de correlação, poderemos expressar tais informações em um gráfico de heatmap para termos uma representação mais dinâmica e mais fácil de visualizar estes dados de correlação:
+
+![](./img/A7.png)
+
+As conclusões inferíveis dos gráficos de heatmap expostos acima são:
+
+   **(1)** Em conformidade com às expectativas, a correlação entre gols do mandante ou visitante em relação aos gols da partida apresenta uma correlação positiva, ou seja, o aumento de gols do time mandante ou visitante é tautologicamente influenciável no aumento de gols da partida.
+   
+   **(2)** Como foi especulado de antemão, a correlação entre gols do time mandante e gols da partida apresenta uma correlação minimamente mais forte do que a correlação entre gols do time visitante e gols da partida, assim, confirma a hipótese de que os times da 'casa' tendem à ter mais vantagem no jogo do que os times visitantes, e por conseguinte tendem à fazer mais gols do que os times visitantes. 
