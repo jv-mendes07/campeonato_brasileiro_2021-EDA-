@@ -84,6 +84,11 @@ Colunas do dataset de estatísticas de jogos do campeonato brasileiro:
   ```
   df_br_21['gols_na_partida'] = df_br_21['mandante_placar'] + df_br_21['visitante_placar']
   ```
+  
+* Formatação de colunas:
+  
+  **(1)** A coluna 'arena' foi formatada textualmente de letras minúsculas para o tipo textual de título com letras maiúsculas no início do nome de cada arena em que os jogos do Brasileirão foram ocorrentes em 2021.
+    
 ### **(2)** Conhecimento exploratório dos dados
 
 Nesta fase, os dados do Brasileirão 2021 começaram à ser explorados para que novas informações fossem extraídas de tal base de dados, primeiramente aplicamos o método .cumsum() para obtermos a soma cumulativa de gols por partida no Brasileirão 2021, e por fim obtivemos o resultado 842, que em outras palavras significa que 842 gols foram marcados no Brasileirão 2021 como um todo.
@@ -152,6 +157,35 @@ Um gráfico de pizza seria útil para representar proporcionalmente a quantidade
 ![](./img/A2.png)
 
 Em suma, o gráfico de pizza expressa informacionalmente que do total de gols marcados em todos os Brasileirões de 2003 até 2021, aproximadamente entre 7 e 8% desses gols foram marcados entre os anos de 2003 e 2005, e de 100% do total de gols de todos os Brasileirões, 23% representa a quantidade de gols marcados nos anos de 2003 até 2005, ou seja, quase 1 / 4 dos gols de todos os Brasileirões foi marcado em tal intervalo entre 2003 e 2005.
+
+Após termos tal noção de quais foram às edições anuais do Brasileirão com mais gols contabilizados, podemos inicializar a análise restrita exclusivamente ao Brasileirão 2021.
+
+#### **(2)** Quais foram os times com mais vitórias registradas no Brasileirão 2021?
+
+Basicamente, antes de respondermos tal pergunta, poderemos responder quais foram os times participantes do Brasileirão 2021 da série A:
+
+```
+'Atlético-MG',
+ 'Flamengo',
+ 'Palmeiras',
+ 'Fortaleza',
+ 'Fluminense',
+ 'Corinthians',
+ 'Bragantino',
+ 'Athletico-PR',
+ 'Atlético-GO',
+ 'América-MG',
+ 'Santos',
+ 'Internacional',
+ 'Grêmio',
+ 'Bahia',
+ 'Ceará',
+ 'Juventude',
+ 'São Paulo',
+ 'Cuiabá',
+ 'Sport',
+ 'Chapecoense'
+ ```
 
 
 
