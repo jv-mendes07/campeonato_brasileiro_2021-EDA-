@@ -355,7 +355,7 @@ Por esses dados numéricos de correlação, poderemos expressar tais informaçõ
 
 ![](./img/A7.png)
 
-As conclusões inferíveis dos gráficos de heatmap expostos acima são:
+As conclusões inferíveis do gráfico de heatmap exposto acima são:
 
    **(1)** Em conformidade com às expectativas, a correlação entre gols do mandante ou visitante em relação aos gols da partida apresenta uma correlação positiva, ou seja, o aumento de gols do time mandante ou visitante é tautologicamente influenciável no aumento de gols da partida.
    
