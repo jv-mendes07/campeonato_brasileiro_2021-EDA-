@@ -449,7 +449,7 @@ Basicamente, foi agrupado todos os times do Brasileirão e foi contabilizado a q
 
 Disto, plotamos novamente um gráfico de barras horizontais para representar intuitivamente tais informações descobertas:
 
-![](./img/A11.png)
+![](./img/A15.png)
 
 O gráfico de colunas acima explicita demonstrativamente que o Atlético-MG e o Atlético-GO, Corinthians e o Flamengo (os três empatados) foram um dos times com às melhores defesas do Brasileirão 2021, por terem sofrido menos gols no campeonato como um todo.
 
