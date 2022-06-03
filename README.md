@@ -447,7 +447,7 @@ Basicamente, foi agrupado todos os times do Brasileirão e foi contabilizado a q
 | 1          | Atlético-MG   | 34         |
 |            |               |            |
 
-Disto, plotamos novamente um gráfico de barras horizontais para representar mais intuitivamente tais informações descobertas:
+Disto, plotamos novamente um gráfico de barras horizontais para representar intuitivamente tais informações descobertas:
 
 ![](./img/A11.png)
 
