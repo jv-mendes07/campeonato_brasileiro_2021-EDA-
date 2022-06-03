@@ -92,6 +92,8 @@ Colunas do dataset de estatísticas de jogos do campeonato brasileiro:
 * Formatação de colunas:
   
   **(1)** A coluna 'arena' foi formatada textualmente de letras minúsculas para o tipo textual de título com letras maiúsculas no início do nome de cada arena em que os jogos do Brasileirão foram ocorrentes em 2021.
+  
+  **(2)** As colunas de times, arenas e dias dos jogos foram formatadas para um tipo textual mais correto ortograficamente.
     
 ### **(2)** Conhecimento exploratório dos dados
 
@@ -351,7 +353,7 @@ Isto é, será que há uma tendência de que os times mandantes marquem mais gol
 
 Com o método .corr() obtemos que a correlação entre gols do time mandante e gols por partida é 0.75, ou seja, é uma correlação forte entre às duas variáveis, enquanto a correlação entre gols do time visitante e gols por partida é 0.69, que é uma correlação classificada como moderada pela correlação de Pearson.
 
-Por esses dados numéricos de correlação, poderemos expressar tais informações em um gráfico de heatmap para termos uma representação mais dinâmica e mais fácil de visualizar estes dados de correlação:
+Por esses dados numéricos de correlação, poderemos expressar tais informações em um gráfico de heatmap para termos uma representação mais dinâmica e mais fácil de visualizar em relação aos dados de correlação:
 
 ![](./img/A7.png)
 
@@ -360,3 +362,127 @@ As conclusões inferíveis do gráfico de heatmap exposto acima são:
    **(1)** Em conformidade com às expectativas, a correlação entre gols do mandante ou visitante em relação aos gols da partida apresenta uma correlação positiva, ou seja, o aumento de gols do time mandante ou visitante é tautologicamente influenciável no aumento de gols da partida.
    
    **(2)** Como foi especulado de antemão, a correlação entre gols do time mandante e gols da partida apresenta uma correlação minimamente mais forte do que a correlação entre gols do time visitante e gols da partida, assim, confirma a hipótese de que os times da 'casa' tendem à ter mais vantagem no jogo do que os times visitantes, e por conseguinte tendem à fazer mais gols do que os times visitantes. 
+   
+Como entramos em uma questão sobre correlação, poderemos aprofundar tal exploração informacional com à seguinte pergunta:
+
+#### **(6)** Qual é a correlação entre chutes ao gol e o total de gols de cada time como mandante e visitante?
+
+Basicamente, queremos responder qual é a correlação entre chutes ao gol e o total de gols nas partidas dos times que jogaram 'dentro' e 'fora' de casa no Brasileirão 2021, redundatemente é expectante que haja uma questão probabilística de que quão mais chutes um time dispara ao gol, maior é a probabilidade de que o time marque um gol, neste caso é esperado que haja uma correlação positiva entre chutes ao gol e total de gols na partida.
+
+A correlação entre chutes ao gol de times mandantes / visitantes em relação ao total de gols na partida é:
+
+Chutes Ao Gol  X Gols Do Time Mandante:  0.72
+
+Chutes Ao Gol X Gols Do Time Visitante:  0.82
+
+Em outras palavras, as duas correlação acima são fortes em que o aumento em chutes ao gol dos times mandantes / visitantes é correlata com o aumento de gols na partida de tais times mandantes / visitantes, porém curiosamente há uma correlação positiva mais forte entre chutes ao gol e gols na partida de times visitantes.
+
+Especulativamente, há como supormos que os chutes ao gol são mais correlacionados ao aumento de gols do time visitante do que ao aumento de gols do time mandante porque os times visitantes por terem menos facilidade e oportunidades para contra-atacar o time adversário, aproveitam às pouquíssimas oportunidades de chute ao gol do time adversário com mais precisão e nos momentos exatos em que a defesa do time adversário está distraída no jogo, e por esse motivo os chutes ao gol do time visitante poderão ser correlativamente influentes (ou não) no aumento de gols do time visitante.
+
+###### Obs :. Correlação não é necessariamente causalidade, tal suposição acima é definitivamente especulativa e sem quaisquer provas definitórias.
+
+Disto, há como plotarmos um gráfico de scatterplot com uma reta de regressão linear para vermos nitidamente a correlação entre chutes ao gol e total de gols na partida para times mandantes ou visitantes:
+
+![](./img/A8.png)
+
+Como é visualizável, a reta de regressão linear demonstra que é mais previsível correlativamente que o aumento em chutes ao gol esteja acompanhável pelo aumento de gols na partida dos times mandantes, a parte sombreada em torno da reta representa o intervalo de confiança em que os dados poderão ser previstos, e neste caso é notável que há uma correlação mais forte entre chutes ao gol e gols na partida para o time mandante do que ao visitante.
+
+À partir de tais informações, poderemos nos aprofundar em questões tecnicamente mais estatísticas em relação ao campeonato brasileiro:
+
+#### **(7)** Quais são os times que tiveram maior posse de bola em mais partidas no Brasileirão 2021?
+
+Disto, fizemos um agrupamento de times que contabilizava a quantidade de partidas em que cada time possuia uma posse de bola superior ao time adversário, assim com tal informação plotamos novamente um gráfico de barras horizontais para representar em ordem decrescente os times com maior posse de bola em mais partidas até os times que tiveram mais controle de bola em poucas partidas:
+
+![](./img/A9.png)
+
+Flamengo, São Paulo, Santos, Corinthians, Atlético-MG e Fortaleza são um dos times que tiveram maior posse de bola do que o time adversário em mais partidas contabilizadas. 
+
+Um dos times do G4 que estão nesse ranking são o Flamengo, o Atlético-MG e o Fortaleza, no G6 tivemos o Corinthias que teve um término na 5 posição do Brasileirão, o Santos que teve um término de campeonato na 10 posição e o São Paulo que teve um término em 13 posição do Brasileirão 2021.
+
+Curiosamente, o São Paulo foi um dos times com menos vitórias contabilizadas no Brasileirão 2021, porém foi o segundo time que teve uma maior posse de bola em mais partidas no campeonato brasileiro como um todo. 
+
+Alguns times que foram rebaixados para a série B do Brasileirão foram um dos times que contabilizaram menos partidas em que tiveram uma maior posse de bola, tais times são Chapecoense, Sport Recife e Bahia.
+
+Para continuarmos em tais questões estatísticas, poderemos nos questionar:
+
+#### **(8)** Quais foram os times que tiveram uma precisão de passe acima da média em mais partidas do Brasileirão 2021?
+
+Antes de respondermos tal indagação, teremos que saber qual é a média de precisão de passe dos times por cada partida no Brasileirão 2021, e a resposta para tal questão é que em média os times apresentam uma precisão no passe de 80% por partida no campeonato como um todo. 
+
+Com a informação da média de precisão do passe por partida de 80%, poderemos filtrar os times que apresentaram uma precisão no passe acima de 80% e contabilizarmos os times que tiveram quantitativamente mais partidas com uma precisão de passe acima da média:
+
+![](./img/A10.png)
+
+O Fluminense foi o time com uma precisão de passe acima da média contabilizada em mais partidas no Brasileirão 2021, abaixo do Fluminense há o Corinthians, Atlético-MG e Flamengo como um dos times que tiveram uma precisão percentual de passe acima da média contável em mais partidas.
+
+Novamente, os times que terminaram próximos ou dentro do G4, foram os times tanto com maior posse de bola em mais partidas, quanto foram os times com uma precisão de passe acima da média contabilizada em mais partidas no campeonato brasileiro.
+
+E já que estamos tratando sobre questões estatísticas e técnicas, poderemos responder uma questão relativa à defesa dos times brasileiros, isto é, quais foram os times com às melhores e piores defesas no Brasileirão 2021?
+
+#### **(9)** Quais times sofreram menos e mais gols no campeonato como um todo?
+
+Basicamente, foi agrupado todos os times do Brasileirão e foi contabilizado a quantidade de gols sofridos por cada time em todo o campeonato, após isto ordenamos o dataset em ordem decrescente dos times que sofreram mais gols até os times que sofreram menos gols no Brasileirão 2021:
+
+| total_gols | time          | total_gols |
+|------------|---------------|------------|
+| 19         | Chapecoense   | 67         |
+| 14         | Grêmio        | 51         |
+| 17         | Bahia         | 51         |
+| 12         | Bragantino    | 46         |
+| 15         | Athletico-PR  | 45         |
+| 11         | Fortaleza     | 45         |
+| 7          | Juventude     | 44         |
+| 18         | Palmeiras     | 43         |
+| 16         | Internacional | 42         |
+| 3          | Santos        | 40         |
+| 9          | São Paulo     | 39         |
+| 5          | Fluminense    | 38         |
+| 6          | Ceará         | 38         |
+| 0          | América-MG    | 37         |
+| 13         | Cuiaba        | 37         |
+| 2          | Sport         | 37         |
+| 8          | Flamengo      | 36         |
+| 4          | Atlético-GO   | 36         |
+| 10         | Corinthians   | 36         |
+| 1          | Atlético-MG   | 34         |
+|            |               |            |
+
+Disto, plotamos novamente um gráfico de barras horizontais para representar intuitivamente tais informações descobertas:
+
+![](./img/A11.png)
+
+O gráfico de colunas acima explicita demonstrativamente que o Atlético-MG e o Atlético-GO, Corinthians e o Flamengo (os três empatados) foram um dos times com às melhores defesas do Brasileirão 2021, por terem sofrido menos gols no campeonato como um todo.
+
+Atlético-MG como campeão do campeonato foi o time com menos gols sofridos, abaixo há o Atlético-GO que teve um término de campeonato na nona posição, o Flamengo teve um término como vice-campeão e o Corinthians teve o término de campeonato na quinta posição.
+
+Grêmio, Bahia e Chapecoense que foram os times rebaixados para a série B do Brasileirão, também foram expectantemente os times com mais gols sofridos no Brasileirão 2021.
+
+Curiosamente, o Sport que foi um dos times rebaixados para a série B, foi um dos times com menos gols sofridos no campeonato, com um gol de diferença para os times com às melhores defesas da competição. 
+
+Enquanto paralelamente o Palmeiras e o Fortaleza que foram um dos times que terminaram o campeonato no G4, foram paradoxalmente times com mais gols sofridos em comparação ao Sport e ao Cuiabá que foram times rebaixados ou que estiveram próximos ao rebaixamento. 
+
+Já que vimos bastante sobre estatísticas relativas aos destaques técnicos dos times do G4, poderemos trazer distribuições estatísticas da quantidade de chutes ao gol, escanteios e passes realizados em cada partida partida pelos times do G4, assim teremos uma compreensão mais ampla do quão bom tecnicamente foram esses times em comparação à cada um
+
+![](./img/A12.png)
+
+O Atlético-MG é um dos times do G4 com uma distribuição maior de passes e escanteios cobrados por partida, enquanto o Palmeiras é o time com uma maior distribuição concentrada de chutes ao gol realizados por partida. 
+
+Para finalizar tal análise exploratória, poderemos trazer informações adicionais sobre artilharia, isto é, de quais foram os jogadores que mais marcaram gols no Brasileirão 2021.
+
+#### **(10)** Quais foram os maiores artilheiros do Brasileirão 2021? 
+
+Para responder tal questão, basta um gráfico de barras horizontais para expressar visualmente os dez maiores artilheiros de todo o campeonato em ordem decrescente (do maior ao menor):
+
+![](./img/A13.png)
+
+Para adicionarmos uma informação extra, poderemos plotar os maiores artilheiros que somaram mais gols marcados de 2014 até 2021:
+
+![](./img/A14.png)
+
+Hulk foi o artilheiro do Brasileirão 2021 com mais gols marcados em todo o campeonato.
+
+Gabriel Barbosa ou Gabigol do Flamengo foi o jogador artilheiro com mais gols marcados somaticamente do Brasileirão 2014 até 2021, e interessantemente foi o quinto artilheiro com mais gols marcados no Brasileirão 2021.
+
+Por fim, há como considerarmos que essa análise exploratória foi encerrada com chave de ouro, com informações extras e curiosidades relacionadas à artilharia do campeonato, porém espero que tal análise tenha sido proveitosa e informativa em relação à edição de 2021 do campeonato brasileiro, que foi iniciada em Maio e concluída em Dezembro, com o time mineiro Atlético-MG como um dos destaques e como o time campeão de todo o torneio.
+
+## ANÁLISE EXPLORATÓRIA FINALIZADA
