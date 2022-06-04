@@ -375,7 +375,7 @@ Chutes Ao Gol  X Gols Do Time Mandante:  0.72
 
 Chutes Ao Gol X Gols Do Time Visitante:  0.82
 
-Em outras palavras, as duas correlação acima são fortes em que o aumento em chutes ao gol dos times mandantes / visitantes é correlata com o aumento de gols na partida de tais times mandantes / visitantes, porém curiosamente há uma correlação positiva mais forte entre chutes ao gol e gols na partida de times visitantes.
+Em outras palavras, as duas correlações acima são fortes em que o aumento em chutes ao gol dos times mandantes / visitantes é correlata com o aumento de gols na partida de tais times mandantes / visitantes, porém curiosamente há uma correlação positiva mais forte entre chutes ao gol e gols na partida de times visitantes.
 
 Especulativamente, há como supormos que os chutes ao gol são mais correlacionados ao aumento de gols do time visitante do que ao aumento de gols do time mandante porque os times visitantes por terem menos facilidade e oportunidades para contra-atacar o time adversário, aproveitam às pouquíssimas oportunidades de chute ao gol do time adversário com mais precisão e nos momentos exatos em que a defesa do time adversário está distraída no jogo, e por esse motivo os chutes ao gol do time visitante poderão ser correlativamente influentes (ou não) no aumento de gols do time visitante.
 
