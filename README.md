@@ -156,11 +156,11 @@ Inversamente, ordenamos também as edições do Brasileirão que tiveram menos g
 
 Após tal exposição, poderemos apresentar um gráfico de colunas para representar a quantidade de gols marcados em cada edição anual do Brasileirão:
 
-![](./img/A1.png)
+![](./img/a1.png)
 
 Um gráfico de pizza seria útil para representar proporcionalmente a quantidade de gols marcados em cada ano do Brasileirão em relação a quantidade de gols marcados durante todos os Brasileirões de 2003 até 2021.
 
-![](./img/A2.png)
+![](./img/a2.png)
 
 Em suma, o gráfico de pizza expressa informacionalmente que do total de gols marcados em todos os Brasileirões de 2003 até 2021, aproximadamente 8% desses gols foram marcados nos anos de 2003, e de 100% do total de gols de todos os Brasileirões, 23% representa a quantidade de gols marcados nos anos entre 2003 e 2005, ou seja, quase 1 / 4 dos gols de todos os Brasileirões foi marcado em tal intervalo entre 2003 e 2005.
 
@@ -194,13 +194,13 @@ Basicamente, antes de respondermos tal pergunta, poderemos classificar quais for
  ```
 Entre todos os times escritos acima, temos um gráfico de barras horizontais para expressar em ordem decrescente os times com mais vitórias até os times com menos vitórias contabilizadas em todo o Brasileirão 2021:
 
-![](./img/A3.png)
+![](./img/a3.png)
 
 Pelo gráfico de barras horizontais acima é observável conspicuamente que os cinco (ou seis) times que mais contabilizaram vitórias foram o Atlético Mineiro, Flamengo, Palmeiras, Fortaleza, e por fim Fluminense e Corinthians empatados.
 
 Disto, poderemos ter dois gráficos de colunas para expressar ordenadamente os 4 times com mais vitórias contabilizadas em constraste aos times com menos vitórias contabilizadas em todo o campeonato.
 
-![](./img/A4.png)
+![](./img/a4.png)
 
 O time campeão do Brasileirão 2021 foi o Atlético Mineiro e intuitivamente é expectante que este tenha sido o time com mais vitórias no campeonato todo, o Flamengo foi o vice-campeão, o Palmeiras teve o término em terceiro lugar e o Fortaleza em quarto lugar na tabela do Brasileirão 2021.
 
@@ -287,7 +287,7 @@ Curiosamente, os times com mais vitórias contabilizadas, foram um dos times com
 
 Depois disto, plotamos um gráfico de barras horizontais para representar visualmente os dez times que mais empataram em todo o campeonato:
 
-![](./img/A5.png)
+![](./img/a5.png)
 
 O gráfico de barras acima demonstra que o São Paulo e o Cuiabá foram um dos times que mais empataram no Brasileirão 2021 e que contabilizaram mais empates do que o Grêmio e o Bahia. 
 
@@ -323,7 +323,7 @@ Para respondermos a tal pergunta, realizamos o mesmo processo manipulativo para 
 
 Após isto, utilizamos o gráfico comum e simples de colunas para representarmos os dez times com mais derrotas registradas em todo o torneio:
 
-![](./img/A6.png)
+![](./img/a6.png)
 
 Concluído isto, fizemos a diferença de empates e de vitórias entre São Paulo e Cuiabá em comparação ao Bahia e ao Grêmio, e descobrimos que às explicações do porquê São Paulo e Cuiabá que foram times com menos vitórias e que não foram rebaixados, em comparação ao Grêmio e ao Bahia que tiveram mais vitórias e foram rebaixados é que:
 
@@ -355,7 +355,7 @@ Com o método .corr() obtemos que a correlação entre gols do time mandante e g
 
 Por esses dados numéricos de correlação, poderemos expressar tais informações em um gráfico de heatmap para termos uma representação mais dinâmica e mais fácil de visualizar em relação aos dados de correlação:
 
-![](./img/A7.png)
+![](./img/a7.png)
 
 As conclusões inferíveis do gráfico de heatmap exposto acima são:
 
@@ -383,7 +383,7 @@ Especulativamente, há como supormos que os chutes ao gol são mais correlaciona
 
 Disto, há como plotarmos um gráfico de scatterplot com uma reta de regressão linear para vermos nitidamente a correlação entre chutes ao gol e total de gols na partida para times mandantes ou visitantes:
 
-![](./img/A8.png)
+![](./img/a8.png)
 
 Como é visualizável, a reta de regressão linear demonstra que é mais previsível correlativamente que o aumento em chutes ao gol esteja acompanhável pelo aumento de gols na partida dos times mandantes, a parte sombreada em torno da reta representa o intervalo de confiança em que os dados poderão ser previstos, e neste caso é notável que há uma correlação mais forte entre chutes ao gol e gols na partida para o time mandante do que ao visitante.
 
@@ -393,7 +393,7 @@ Como é visualizável, a reta de regressão linear demonstra que é mais previs�
 
 Disto, fizemos um agrupamento de times que contabilizava a quantidade de partidas em que cada time possuia uma posse de bola superior ao time adversário, assim com tal informação plotamos novamente um gráfico de barras horizontais para representar em ordem decrescente os times com maior posse de bola em mais partidas até os times que tiveram mais controle de bola em poucas partidas:
 
-![](./img/A9.png)
+![](./img/a9.png)
 
 Flamengo, São Paulo, Santos, Corinthians, Atlético-MG e Fortaleza são um dos times que tiveram maior posse de bola do que o time adversário em mais partidas contabilizadas. 
 
@@ -411,7 +411,7 @@ Antes de respondermos tal indagação, teremos que saber qual é a média de pre
 
 Com a informação da média de precisão do passe por partida de 80%, poderemos filtrar os times que apresentaram uma precisão no passe acima de 80% e contabilizarmos os times que tiveram quantitativamente mais partidas com uma precisão de passe acima da média:
 
-![](./img/A10.png)
+![](./img/a10.png)
 
 O Fluminense foi o time com uma precisão de passe acima da média contabilizada em mais partidas no Brasileirão 2021, abaixo do Fluminense há o Corinthians, Atlético-MG e Flamengo como um dos times que tiveram uma precisão percentual de passe acima da média contável em mais partidas.
 
@@ -449,7 +449,7 @@ Basicamente, foi agrupado todos os times do Brasileirão e foi contabilizado a q
 
 Disto, plotamos novamente um gráfico de barras horizontais para representar intuitivamente tais informações descobertas:
 
-![](./img/A15.png)
+![](./img/a11.png)
 
 O gráfico de colunas acima explicita demonstrativamente que o Atlético-MG e o Atlético-GO, Corinthians e o Flamengo (os três empatados) foram um dos times com às melhores defesas do Brasileirão 2021, por terem sofrido menos gols no campeonato como um todo.
 
@@ -461,7 +461,7 @@ Curiosamente, o Sport que foi um dos times rebaixados para a série B, foi um do
 
 Enquanto paralelamente o Palmeiras e o Fortaleza que foram um dos times que terminaram o campeonato no G4, foram paradoxalmente times com mais gols sofridos em comparação ao Sport e ao Cuiabá que foram times rebaixados ou que estiveram próximos ao rebaixamento. 
 
-Já que vimos bastante sobre estatísticas relativas aos destaques técnicos dos times do G4, poderemos trazer distribuições estatísticas da quantidade de chutes ao gol, escanteios e passes realizados em cada partida partida pelos times do G4, assim teremos uma compreensão mais ampla do quão bom tecnicamente foram esses times em comparação à cada um
+Já que vimos bastante sobre estatísticas relativas aos destaques técnicos dos times do G4, poderemos trazer distribuições estatísticas da quantidade de chutes ao gol, escanteios e passes realizados em cada partida partida pelos times do G4, assim teremos uma compreensão mais ampla do quão bom tecnicamente foram esses times em comparação à cada um:
 
 ![](./img/A12.png)
 
@@ -473,11 +473,11 @@ Para finalizar tal análise exploratória, poderemos trazer informações adicio
 
 Para responder tal questão, basta um gráfico de barras horizontais para expressar visualmente os dez maiores artilheiros de todo o campeonato em ordem decrescente (do maior ao menor):
 
-![](./img/A13.png)
+![](./img/a12.png)
 
 Para adicionarmos uma informação extra, poderemos plotar os maiores artilheiros que somaram mais gols marcados de 2014 até 2021:
 
-![](./img/A14.png)
+![](./img/a13.png)
 
 Hulk foi o artilheiro do Brasileirão 2021 com mais gols marcados em todo o campeonato.
 
