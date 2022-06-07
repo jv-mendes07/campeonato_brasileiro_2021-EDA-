@@ -473,11 +473,11 @@ Para finalizar tal análise exploratória, poderemos trazer informações adicio
 
 Para responder tal questão, basta um gráfico de barras horizontais para expressar visualmente os dez maiores artilheiros de todo o campeonato em ordem decrescente (do maior ao menor):
 
-![](./img/a12.png)
+![](./img/a14.png)
 
 Para adicionarmos uma informação extra, poderemos plotar os maiores artilheiros que somaram mais gols marcados de 2014 até 2021:
 
-![](./img/a13.png)
+![](./img/a15.png)
 
 Hulk foi o artilheiro do Brasileirão 2021 com mais gols marcados em todo o campeonato.
 
