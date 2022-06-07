@@ -461,7 +461,7 @@ Curiosamente, o Sport que foi um dos times rebaixados para a série B, foi um do
 
 Enquanto paralelamente o Palmeiras e o Fortaleza que foram um dos times que terminaram o campeonato no G4, foram paradoxalmente times com mais gols sofridos em comparação ao Sport e ao Cuiabá que foram times rebaixados ou que estiveram próximos ao rebaixamento. 
 
-Já que vimos bastante sobre estatísticas relativas aos destaques técnicos dos times do G4, poderemos trazer distribuições estatísticas da quantidade de chutes ao gol, escanteios e passes realizados em cada partida partida pelos times do G4, assim teremos uma compreensão mais ampla do quão bom tecnicamente foram esses times em comparação à cada um
+Já que vimos bastante sobre estatísticas relativas aos destaques técnicos dos times do G4, poderemos trazer distribuições estatísticas da quantidade de chutes ao gol, escanteios e passes realizados em cada partida partida pelos times do G4, assim teremos uma compreensão mais ampla do quão bom tecnicamente foram esses times em comparação à cada um:
 
 ![](./img/A12.png)
 
@@ -473,11 +473,11 @@ Para finalizar tal análise exploratória, poderemos trazer informações adicio
 
 Para responder tal questão, basta um gráfico de barras horizontais para expressar visualmente os dez maiores artilheiros de todo o campeonato em ordem decrescente (do maior ao menor):
 
-![](./img/a13.png)
+![](./img/a12.png)
 
 Para adicionarmos uma informação extra, poderemos plotar os maiores artilheiros que somaram mais gols marcados de 2014 até 2021:
 
-![](./img/a14.png)
+![](./img/a13.png)
 
 Hulk foi o artilheiro do Brasileirão 2021 com mais gols marcados em todo o campeonato.
 
